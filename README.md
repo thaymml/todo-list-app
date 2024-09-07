@@ -18,4 +18,3 @@ Este é um simples aplicativo de gerenciamento de tarefas (To-Do List) onde é p
 - JavaScript
 - Local Storage
 
-## Como Usar
