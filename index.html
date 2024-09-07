@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="mb-4">
+            <h1 class="text-center">Gerenciador de Tarefas</h1>
+            <button id="toggleTheme" class="btn btn-secondary mb-3" aria-label="Alternar tema">Modo Escuro</button>
+        </header>
+        <main>
+            <form id="taskForm" class="mb-4">
+                <div class="form-group">
+                    <input type="text" id="taskInput" class="form-control" placeholder="Título da tarefa" required aria-label="Título da tarefa">
+                </div>
+                <div class="form-group">
+                    <textarea id="descriptionInput" class="form-control" placeholder="Descrição da tarefa" aria-label="Descrição da tarefa"></textarea>
+                </div>
+                <div class="form-group">
+                    <select id="priorityInput" class="form-control" aria-label="Prioridade">
+                        <option value="low">Baixa</option>
+                        <option value="medium">Média</option>
+                        <option value="high">Alta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="dueDateInput" class="form-control" aria-label="Data de vencimento">
+                </div>
+                <button type="submit" class="btn btn-primary">Adicionar Tarefa</button>
+            </form>
+            <div class="filter-container mb-4">
+                <div class="filter-group">
+                    <label for="filterPriority">Filtrar por prioridade:</label>
+                    <select id="filterPriority" class="form-control" aria-label="Filtro por prioridade">
+                        <option value="all">Todas</option>
+                        <option value="low">Baixa</option>
+                        <option value="medium">Média</option>
+                        <option value="high">Alta</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchInput">Buscar tarefas:</label>
+                    <input type="text" id="searchInput" class="form-control" placeholder="Buscar tarefas" aria-label="Buscar tarefas">
+                </div>
+            </div>
+            <ul id="taskList" class="list-group"></ul>
+        </main>
+        <button id="scrollToTop" aria-label="Voltar ao topo">↑</button>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
